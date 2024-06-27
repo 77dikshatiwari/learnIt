@@ -1,14 +1,16 @@
 import React, {useState} from 'react'
+import Book from '../assets/logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div>
-      <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="text-black text-lg font-semibold">
-          <a href="/">MyLogo</a>
-        </div>
+    <div className="m-0">
+      <nav className="bg-gray-800 p-4 m-0">
+      <div className="container px-0  mx-auto flex items-center justify-between">
+        <span className="text-white text-lg font-semibold flex">
+          <a href="/"><img src={Book} className='w-20 h-10'/></a>
+        <span className='flex'>LearnIt</span>
+        </span>
         <div className="block lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -23,14 +25,14 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? 'block' : 'hidden'}`}>
+        {/* <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? 'block' : 'hidden'}`}>
           <ul className="lg:flex lg:space-x-6 mt-4 lg:mt-0">
             <li><a href="/" className="block text-white hover:text-gray-400">Home</a></li>
             <li><a href="/about" className="block text-white hover:text-gray-400">About</a></li>
             <li><a href="/services" className="block text-white hover:text-gray-400">Services</a></li>
             <li><a href="/contact" className="block text-white hover:text-gray-400">Contact</a></li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </nav>
     </div>
